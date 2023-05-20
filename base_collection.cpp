@@ -55,6 +55,18 @@ int main() {
     // 마지막 요소 접근하기 (back)
     std::cout << "Back element: " << myVector.back() << std::endl;
 
+    // 중복 제거1
+    std::vector<std::vector<int>> answer;
+    std::vector<std::vector<int>> uniqueAnswer;
+    for (const auto& item : answer) {
+        if (std::find(uniqueAnswer.begin(), uniqueAnswer.end(), item) == uniqueAnswer.end()) { // 중복 확인
+        uniqueAnswer.push_back(item);
+        }
+    }
+
+    // 중복 제거2
+    std::unordered_set<std::vector<int>> uniqueAnswer(answer.begin(), answer.end());
+
     ///////////////////////////////////////////
 
     // std::unordered_map: insert erase begin end empty
