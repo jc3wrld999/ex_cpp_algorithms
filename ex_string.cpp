@@ -67,6 +67,10 @@ string run_length_decoding(const string& compressed_seq) {
     return res;
 }
 
+bool starts_with(const string& str, const string& prefix) {
+    return str.size() >= prefix.size() && str.substr(0, prefix.size()) == prefix;
+}
+
 int main() {
     string text = "DYITBOOK DYSHOP";
     string pattern = "DYS";

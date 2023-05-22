@@ -126,6 +126,16 @@ int main() {
         }
         cout << endl;
     }
+    
+    // value로 key에 접근
+    string value2 = "Banana";
+    int key2 = -1; // key를 저장할 변수 초기화
+    for (const auto& pair : myMap) {
+        if (pair.second == value2) {
+            key2 = pair.first;
+            break;
+        }
+    }
 
     // unordered_set
     // insert erase begin end empty
