@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main() {
     int cnt = 0;
@@ -17,7 +18,7 @@ int main() {
         }
     }
 
-    std::cout << cnt << std::endl;
+    cout << cnt << endl;
 
     return 0;
 }

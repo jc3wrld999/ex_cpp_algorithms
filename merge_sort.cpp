@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-
-std::vector<int> merge(std::vector<int>& left, std::vector<int>& right) {
-    std::vector<int> result;
+using namespace std;
+vector<int> merge(vector<int>& left, vector<int>& right) {
+    vector<int> result;
     int i = 0, j = 0;
 
     while (i < left.size() && j < right.size()) {
@@ -28,15 +28,15 @@ std::vector<int> merge(std::vector<int>& left, std::vector<int>& right) {
     return result;
 }
 
-std::vector<int> mergeSort(std::vector<int>& data) {
+vector<int> mergeSort(vector<int>& data) {
     if (data.size() <= 1) {
         return data;
     }
 
     int mid = data.size() / 2;
 
-    std::vector<int> left(data.begin(), data.begin() + mid);
-    std::vector<int> right(data.begin() + mid, data.end());
+    vector<int> left(data.begin(), data.begin() + mid);
+    vector<int> right(data.begin() + mid, data.end());
 
     left = mergeSort(left);
     right = mergeSort(right);
@@ -45,14 +45,14 @@ std::vector<int> mergeSort(std::vector<int>& data) {
 }
 
 int main() {
-    std::vector<int> data = {6, 15, 4, 2, 8, 5, 11, 9, 7, 13};
+    vector<int> data = {6, 15, 4, 2, 8, 5, 11, 9, 7, 13};
 
-    std::vector<int> sortedData = mergeSort(data);
+    vector<int> sortedData = mergeSort(data);
 
     for (int i = 0; i < sortedData.size(); i++) {
-        std::cout << sortedData[i] << " ";
+        cout << sortedData[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-
-std::vector<std::vector<int>> maze = {
+using namespace std;
+vector<vector<int>> maze = {
     {9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9},
     {9, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 9},
     {9, 0, 9, 0, 0, 0, 9, 9, 0, 9, 9, 9},
@@ -19,7 +19,7 @@ std::vector<std::vector<int>> maze = {
 void search(int x, int y, int depth) {
     // 골에 도달하면 종료
     if (maze[x][y] == 1) {
-        std::cout << depth << std::endl;
+        cout << depth << endl;
         exit(0);
     }
 

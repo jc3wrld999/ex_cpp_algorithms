@@ -2,11 +2,11 @@
 #include <vector>
 #include <cmath>
 #include <unordered_set>
-
+using namespace std;
 const int MAX = 500;
 
 int main() {
-  std::vector<std::vector<int>> answer;
+  vector<vector<int>> answer;
   
   for (int c = 1; c <= MAX / 4; c++) { // 정사각형 한 변 선택
     for (int x = 1; x < c; x++) { // 작은 변 선택
@@ -21,15 +21,15 @@ int main() {
   }
 
   // 중복제거
-//   std::vector<std::vector<int>> uniqueAnswer;
+//   vector<vector<int>> uniqueAnswer;
 //   for (const auto& item : answer) {
-//     if (std::find(uniqueAnswer.begin(), uniqueAnswer.end(), item) == uniqueAnswer.end()) {
+//     if (find(uniqueAnswer.begin(), uniqueAnswer.end(), item) == uniqueAnswer.end()) {
 //       uniqueAnswer.push_back(item);
 //     }
 //   }
-  std::unordered_set<std::vector<int>> uniqueAnswer(answer.begin(), answer.end());
+  unordered_set<vector<int>> uniqueAnswer(answer.begin(), answer.end());
 
-  std::cout << uniqueAnswer.size() << std::endl;
+  cout << uniqueAnswer.size() << endl;
 
   return 0;
 }

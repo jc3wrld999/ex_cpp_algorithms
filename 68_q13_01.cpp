@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+using namespace std;
 int main() {
     int count = 0;
-    std::vector<int> digits = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    vector<int> digits = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     
     do {
         int r = digits[0], e = digits[1], a = digits[2], d = digits[3];
@@ -21,11 +21,11 @@ int main() {
         
         if (read + write + talk == skill) {
             count++;
-            std::cout << read << " + " << write << " + " << talk << " = " << skill << std::endl;
+            cout << read << " + " << write << " + " << talk << " = " << skill << endl;
         }
-    } while (std::next_permutation(digits.begin(), digits.end()));
+    } while (next_permutation(digits.begin(), digits.end()));
     
-    std::cout << count << std::endl;
+    cout << count << endl;
     
     return 0;
 }

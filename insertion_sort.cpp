@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-
+using namespace std;
 int main() {
-    std::vector<int> data = {6, 15, 4, 2, 8, 5, 11, 9, 7, 13};
+    vector<int> data = {6, 15, 4, 2, 8, 5, 11, 9, 7, 13};
 
     for (int i = 1; i < data.size(); i++) {
         int temp = data[i];
@@ -15,9 +15,9 @@ int main() {
     }
 
     for (int i = 0; i < data.size(); i++) {
-        std::cout << data[i] << " ";
+        cout << data[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }

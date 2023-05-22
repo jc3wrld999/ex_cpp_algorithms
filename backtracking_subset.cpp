@@ -1,10 +1,10 @@
 #include <vector>
-
+using namespace std;
 class Solution {
 public:
-    std::vector<std::vector<int>> subsets(std::vector<int>& nums) {
-        std::vector<std::vector<int>> res;
-        std::vector<int> subset;
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> subset;
 
         dfs(nums, 0, subset, res);
 
@@ -12,7 +12,7 @@ public:
     }
 
 private:
-    void dfs(const std::vector<int>& nums, int index, std::vector<int>& subset, std::vector<std::vector<int>>& res) {
+    void dfs(const vector<int>& nums, int index, vector<int>& subset, vector<vector<int>>& res) {
         // 현재 부분집합 추가
         res.push_back(subset);
 

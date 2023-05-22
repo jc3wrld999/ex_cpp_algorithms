@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-
+using namespace std;
 int gcd(int a, int b) {
   if (b == 0)
     return a;
@@ -21,7 +21,7 @@ int main() {
     }
   }
 
-  std::cout << cnt << std::endl;
+  cout << cnt << endl;
 
   return 0;
 }

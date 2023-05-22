@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
-
+using namespace std;
 const int N = 10;      
 const int STEPS = 4;  
 
 int main() {
-  std::vector<int> dp(N + 1, 0); // t회 이동으로 이동한 위치 집계
+  vector<int> dp(N + 1, 0); // t회 이동으로 이동한 위치 집계
   int cnt = 0;
   dp[N] = 1;                     // 초깃값 설정
 
@@ -23,7 +23,7 @@ int main() {
     }
   }
 
-  std::cout << cnt << std::endl;
+  cout << cnt << endl;
   
   return 0;
 }

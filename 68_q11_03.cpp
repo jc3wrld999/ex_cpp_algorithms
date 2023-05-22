@@ -1,7 +1,7 @@
 #include <iostream>
 #include <unordered_map>
-
-std::unordered_map<int, int> memo;
+using namespace std;
+unordered_map<int, int> memo;
 
 int fib(int n) {
     if (memo.count(n) > 0) {
@@ -18,7 +18,7 @@ int fib(int n) {
 }
 
 int main() {
-    std::cout << fib(5) << std::endl;
+    cout << fib(5) << endl;
 
     return 0;
 }

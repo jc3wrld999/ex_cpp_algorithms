@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int cutbar(int m, int n, int current) {
     if (current >= n) {
         return 0; // 잘라내기 완료
@@ -11,8 +13,8 @@ int cutbar(int m, int n, int current) {
 }
 
 int main() {
-    std::cout << cutbar(3, 20, 1) << std::endl;
-    std::cout << cutbar(5, 100, 1) << std::endl;
+    cout << cutbar(3, 20, 1) << endl;
+    cout << cutbar(5, 100, 1) << endl;
 
     return 0;
 }

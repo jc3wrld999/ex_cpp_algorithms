@@ -2,15 +2,15 @@
 #include <unordered_map>
 #include <vector>
 #include <algorithm>
-
+using namespace std;
 int main() {
-  std::vector<int> magic_square = {1, 14, 14, 4, 11, 7, 6, 9,
+  vector<int> magic_square = {1, 14, 14, 4, 11, 7, 6, 9,
                                    8, 10, 10, 5, 13, 2, 3, 15};
 
-  std::unordered_map<int, int> memo;
+  unordered_map<int, int> memo;
   for (int i = 1; i <= magic_square.size(); ++i) {
-    std::vector<int> comb(i);
-    std::fill(comb.begin(), comb.begin() + i, 1);
+    vector<int> comb(i);
+    fill(comb.begin(), comb.begin() + i, 1);
 
     bool hasNext = true;
     while (hasNext) {
@@ -23,7 +23,7 @@ int main() {
       }
       memo[sum]++;
 
-      hasNext = std::next_permutation(comb.begin(), comb.end());
+      hasNext = next_permutation(comb.begin(), comb.end());
     }
   }
 
@@ -36,7 +36,7 @@ int main() {
     }
   }
 
-  std::cout << max_key << " " << max_value << std::endl;
+  cout << max_key << " " << max_value << endl;
 
   return 0;
 }

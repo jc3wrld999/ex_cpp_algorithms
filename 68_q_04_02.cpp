@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 void cutbar(int m, int n) {
     int count = 0;
@@ -7,7 +8,7 @@ void cutbar(int m, int n) {
         current += (current < m) ? current : m;
         count += 1;
     }
-    std::cout << count << std::endl;
+    cout << count << endl;
 }
 
 int main() {

@@ -1,10 +1,10 @@
 #include <iostream>
 #include <unordered_map>
-
+using namespace std;
 const int N = 10;    // Number of steps
 const int STEPS = 4; // Maximum number of steps that can be taken
 
-std::unordered_map<std::pair<int, int>, int, std::hash<std::pair<int, int>>> memo;
+unordered_map<pair<int, int>, int, hash<pair<int, int>>> memo;
 
 int move(int a, int b) {
   if (a > b) {
@@ -14,7 +14,7 @@ int move(int a, int b) {
   }
   
   // 메모 확인
-  std::pair<int, int> key(a, b);
+  pair<int, int> key(a, b);
   if (memo.find(key) != memo.end()) {
     return memo[key];
   }
@@ -31,7 +31,7 @@ int move(int a, int b) {
 }
 
 int main() {
-  std::cout << move(0, N) << std::endl;
+  cout << move(0, N) << endl;
   
   return 0;
 }

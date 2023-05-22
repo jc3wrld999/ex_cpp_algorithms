@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cmath>
-
+using namespace std;
 bool is_prime(int n) {
     if (n <= 1) {
         return false;
     }
-    for (int i = 2; i <= std::sqrt(n); ++i) {
+    for (int i = 2; i <= sqrt(n); ++i) {
         if (n % i == 0) {
             return false;
         }
@@ -16,9 +16,9 @@ bool is_prime(int n) {
 int main() {
     int number = 17;
     if (is_prime(number)) {
-        std::cout << number << " is prime." << std::endl;
+        cout << number << " is prime." << endl;
     } else {
-        std::cout << number << " is not prime." << std::endl;
+        cout << number << " is not prime." << endl;
     }
 
     return 0;

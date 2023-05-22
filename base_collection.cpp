@@ -4,18 +4,18 @@
 #include <vector>
 #include <queue>
 #include <string>
-
+using namespace std;
 int main() {
 
     // string find substr erase to_string stoi
-    std::string str = "10.2";
+    string str = "10.2";
     str.erase(str.find('.'), 1);  // 소수점 제거
-    std::cout << str << std::endl; // 102
+    cout << str << endl; // 102
     str = str.substr(str.find('.') + 1, str.size());
-    std::cout << str << std::endl; // 2
+    cout << str << endl; // 2
 
     // queue: push pop front back empty
-    std::queue<int> myQueue;
+    queue<int> myQueue;
     
     // 값을 추가하기 (push)
     myQueue.push(10);
@@ -27,16 +27,16 @@ int main() {
     
 
     // 첫 번째 요소 접근하기 (front)
-    std::cout << "Front element: " << myQueue.front() << std::endl;
+    cout << "Front element: " << myQueue.front() << endl;
     
     // 마지막 요소 접근하기 (back)
-    std::cout << "Back element: " << myQueue.back() << std::endl;
+    cout << "Back element: " << myQueue.back() << endl;
 
     ///////////////////////////////////
 
     // vector: push_back pop_back erase front back empty
-    std::vector<int> myVector;
-    std::vector<int> myVector2(10, 0);
+    vector<int> myVector;
+    vector<int> myVector2(10, 0);
     
     // 값을 추가하기 (push_back)
     myVector.push_back(10);
@@ -50,27 +50,27 @@ int main() {
     myVector.pop_back();
 
     // 첫 번째 요소 접근하기 (front)
-    std::cout << "Front element: " << myVector.front() << std::endl;
+    cout << "Front element: " << myVector.front() << endl;
     
     // 마지막 요소 접근하기 (back)
-    std::cout << "Back element: " << myVector.back() << std::endl;
+    cout << "Back element: " << myVector.back() << endl;
 
     // 중복 제거1
-    std::vector<std::vector<int>> answer;
-    std::vector<std::vector<int>> uniqueAnswer;
+    vector<vector<int>> answer;
+    vector<vector<int>> uniqueAnswer;
     for (const auto& item : answer) {
-        if (std::find(uniqueAnswer.begin(), uniqueAnswer.end(), item) == uniqueAnswer.end()) { // 중복 확인
+        if (find(uniqueAnswer.begin(), uniqueAnswer.end(), item) == uniqueAnswer.end()) { // 중복 확인
         uniqueAnswer.push_back(item);
         }
     }
 
     // 중복 제거2
-    std::unordered_set<std::vector<int>> uniqueAnswer(answer.begin(), answer.end());
+    unordered_set<vector<int>> uniqueAnswer(answer.begin(), answer.end());
 
     ///////////////////////////////////////////
 
-    // std::unordered_map: insert erase begin end empty
-    std::unordered_map<int, std::string> myMap;
+    // unordered_map: insert erase begin end empty
+    unordered_map<int, string> myMap;
     
     // 값을 추가하기 (insert)
     myMap.insert({1, "Apple"});
@@ -81,20 +81,20 @@ int main() {
     myMap.erase(myMap.end());
     
     if (myMap.count(1) > 0) {
-        std::cout << "1을 포함" << std::endl;
+        cout << "1을 포함" << endl;
     }
 
     // 첫 번째 키-값 쌍 접근하기 (begin, front)
     auto it = myMap.begin();
-    std::cout << "First key: " << it->first << ", value: " << it->second << std::endl;
+    cout << "First key: " << it->first << ", value: " << it->second << endl;
     
     // 마지막 키-값 쌍 접근하기 (rbegin, front)
     auto rit = myMap.end();
-    std::cout << "Last key: " << rit->first << ", value: " << rit->second << std::endl;
+    cout << "Last key: " << rit->first << ", value: " << rit->second << endl;
 
 
-    // std::unordered_set: insert erase begin end empty
-    std::unordered_set<int> mySet;
+    // unordered_set: insert erase begin end empty
+    unordered_set<int> mySet;
     
     // 값을 추가하기 (insert)
     mySet.insert(10);
@@ -105,7 +105,7 @@ int main() {
     mySet.erase(20);
     // 값 포함 확인
     if (mySet.find(20) != mySet.end()) {
-        std::cout << "Element 20 exists in the set" << std::endl;
+        cout << "Element 20 exists in the set" << endl;
     }
 
     return 0;

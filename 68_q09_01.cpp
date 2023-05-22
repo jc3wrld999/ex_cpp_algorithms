@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
-
+using namespace std;
 int main() {
     int boy = 20;
     int girl = 10;
     boy++;
     girl++;
 
-    std::vector<int> ary(boy * girl, 0);
+    vector<int> ary(boy * girl, 0);
     ary[0] = 1;
 
     for (int g = 0; g <= girl; g++) {
@@ -24,7 +24,7 @@ int main() {
     }
 
     int result = ary[ary.size() - 2] + ary[ary.size() - boy - 1];
-    std::cout << result << std::endl;
+    cout << result << endl;
 
     return 0;
 }

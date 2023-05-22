@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
     for (int i = 1; i <= 100; i++) {
         bool flag = false;
@@ -9,7 +11,7 @@ int main() {
             }
         }
         if (flag) {
-            std::cout << i << std::endl;
+            cout << i << endl;
         }
     }
 

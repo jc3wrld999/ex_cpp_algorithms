@@ -5,7 +5,6 @@
 #include <numeric>
 #include <algorithm>
 
-
 using namespace std;
 
 int gcd(int a, int b) {
@@ -27,13 +26,13 @@ bool is_prime(int n) {
 }
 
 int ex_accumulate() { // T accumulate(InputIt first, InputIt last, T init);
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    vector<int> numbers = {1, 2, 3, 4, 5};
 
     // 원소들의 합계 구하기
-    int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
+    int sum = accumulate(numbers.begin(), numbers.end(), 0);
 
     // 원소들의 곱 구하기
-    int product = std::accumulate(numbers.begin(), numbers.end(), 1, std::multiplies<int>());
+    int product = accumulate(numbers.begin(), numbers.end(), 1, multiplies<int>());
 
     return sum;
 }
@@ -75,6 +74,8 @@ void arrayHandler() {
     // reverse (#include algorithms)
     reverse(nums.begin(), nums.end());
 
+    auto max_sum = max_element(nums.begin(), nums.end());
+    int max_index = distance(nums.begin(), max_sum);
 }
 
 void ex_ref() {

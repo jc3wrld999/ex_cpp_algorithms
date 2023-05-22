@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-
+using namespace std;
 struct Position {
     int x;
     int y;
@@ -9,7 +9,7 @@ struct Position {
 };
 
 int main() {
-    std::vector<std::vector<int>> maze = {
+    vector<vector<int>> maze = {
         {9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9},
         {9, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 9},
         {9, 0, 9, 0, 0, 0, 9, 9, 0, 9, 9, 9},
@@ -24,7 +24,7 @@ int main() {
         {9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9}
     };
 
-    std::queue<Position> positions;
+    queue<Position> positions;
     positions.push({1, 1, 0});
 
     while (!positions.empty()) {
@@ -37,7 +37,7 @@ int main() {
 
         // 골에 도달하면 종료
         if (maze[x][y] == 1) {
-            std::cout << depth << std::endl;
+            cout << depth << endl;
             break;
         }
 

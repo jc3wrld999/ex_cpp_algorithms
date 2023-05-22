@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-
-int binarySearch(const std::vector<int>& arr, int target) {
+using namespace std;
+int binarySearch(const vector<int>& arr, int target) {
     int left = 0;
     int right = arr.size() - 1;
 
@@ -21,15 +21,15 @@ int binarySearch(const std::vector<int>& arr, int target) {
 }
 
 int main() {
-    std::vector<int> arr = {1, 2, 4, 5, 7, 9};
+    vector<int> arr = {1, 2, 4, 5, 7, 9};
     int target = 4;
 
     int index = binarySearch(arr, target);
 
     if (index != -1) {
-        std::cout << "Target " << target << " found at index " << index << std::endl;
+        cout << "Target " << target << " found at index " << index << endl;
     } else {
-        std::cout << "Target " << target << " not found in the array." << std::endl;
+        cout << "Target " << target << " not found in the array." << endl;
     }
 
     return 0;

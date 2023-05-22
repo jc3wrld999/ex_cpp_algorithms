@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-
-std::string conv(int number, int base) {
-    std::string T = "0123456789ABCDEF";
+using namespace std;
+string conv(int number, int base) {
+    string T = "0123456789ABCDEF";
     int i, j;
-    std::string result;
+    string result;
 
     i = number;
     while (i != 0) {

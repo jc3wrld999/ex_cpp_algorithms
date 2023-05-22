@@ -1,9 +1,9 @@
 #include <iostream>
 #include <deque>
-
+using namespace std;
 int cnt = 0;
 
-void change(int target, std::deque<int> coins, int usable) {
+void change(int target, deque<int> coins, int usable) {
     int coin = coins.front();
     coins.pop_front();
 
@@ -19,12 +19,12 @@ void change(int target, std::deque<int> coins, int usable) {
 }
 
 int main() {
-    std::deque<int> coins = {500, 100, 50, 10};
+    deque<int> coins = {500, 100, 50, 10};
     int usable = 15;
 
     change(1000, coins, usable);
 
-    std::cout << cnt << std::endl;
+    cout << cnt << endl;
 
     return 0;
 }
